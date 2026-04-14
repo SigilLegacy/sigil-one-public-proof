@@ -1,0 +1,142 @@
+RECOVERY VALIDATOR CORE V1
+OPTION 3 PACKAGE
+
+============================================================
+1. SHORT BRIEF
+============================================================
+
+Recovery Validation is the process of deciding whether a claimed recovery action should be accepted, rejected, or blocked based on evidence, authorization, internal consistency, and state safety.
+
+It is designed to answer one question cleanly:
+
+Was this recovery attempt legitimate enough to trust?
+
+The core logic is simple:
+- no recovery without evidence
+- no recovery without authority
+- no recovery that creates an impossible or unsafe state
+- no completion claim without explicit proof
+- no guessing when required observability is missing
+
+The validator takes a fixed 9-field input:
+- recovery_actor
+- recovery_trigger
+- requested_action
+- target_status
+- residue_status
+- branch_authority_status
+- current_state
+- projection_mode
+- completion_claim_status
+
+It returns one of three outcomes:
+- pass when all required checks succeed
+- fail when a rule is definitively violated
+- blocked when the system lacks enough trustworthy evidence to decide
+
+That matters because many systems can produce a clean recovery story after the fact. This model forces recovery to be auditable, bounded, and evidence-backed at the moment it is evaluated, not just rationalized later.
+
+============================================================
+2. PUBLIC ONE-PAGE SPEC
+============================================================
+
+RECOVERY VALIDATOR CORE V1
+
+Purpose
+Validate whether a recovery action is authorized, evidence-backed, internally consistent, and safe to accept.
+
+Inputs
+All fields required:
+- recovery_actor: who initiated or authorized recovery
+- recovery_trigger: what event caused recovery entry
+- requested_action: what recovery is attempting
+- target_status: whether the target is stable, drifted, collapsed, etc.
+- residue_status: unresolved remainder that constrains recovery
+- branch_authority_status: how authoritative the active branch is
+- current_state: current lifecycle or protocol state
+- projection_mode: current output commitment level
+- completion_claim_status: whether completion is being claimed
+
+Missing required fields must not be inferred. Missing fields produce blocked.
+
+Outcome Contract
+ValidationResult := {
+  status: pass | fail | blocked,
+  failure_class: none | authn | authz | trigger | state_mode | cross_field | integrity | time | completion | schema,
+  corrective_effect: accept | reject | downgrade | revert | block
+}
+
+Rule Surface
+- Missing required field -> blocked
+- Unknown canonical token -> fail
+- Actor identity not provable -> fail or blocked
+- Actor not authorized for action -> fail
+- Trigger evidence missing -> fail
+- Trigger-action mismatch -> fail
+- State and mode incompatible -> fail
+- Drifted target with strong projection -> fail
+- Blocking residue with completion claim -> fail
+- Singular projection without sufficient authority -> fail
+- Completion claimed without proof -> fail
+- Forbidden recovery scope crossed -> fail
+- Evidence integrity insufficient -> blocked or fail
+- Time ordering unclear -> blocked
+
+Minimal Procedure
+1. Check field presence
+2. Check canonical tokens
+3. Verify actor identity
+4. Verify authorization
+5. Verify trigger evidence
+6. Check state and mode compatibility
+7. Apply cross-field gating
+8. Check scope boundaries
+9. Validate completion claim
+10. Verify evidence integrity and time ordering
+11. Emit result: pass | fail | blocked
+
+Evidence Minimum
+A valid review should be able to show:
+- recovery request record
+- actor authentication record
+- authorization decision record
+- trigger provenance
+- state transition record
+- integrity evidence
+- time synchronization evidence
+- trace correlation when available
+
+Public Definition
+Recovery Validation determines whether a claimed recovery action is legitimate enough to trust.
+
+============================================================
+3. EXTERNAL FRAMING COPY
+============================================================
+
+Recovery Validator Core v1
+A deterministic framework for deciding whether a claimed recovery action is valid.
+
+It evaluates recovery as a bounded state transition, not a narrative.
+It checks evidence, authority, consistency, and safety.
+It returns one of three outcomes: pass, fail, or blocked.
+If required observability is missing, it does not guess.
+
+============================================================
+4. BACKING NOTE
+============================================================
+
+A deeper internal report exists behind this package, but it is not part of this public proof release.
+
+This public package is intended to stand on its own as a compact proof artifact.
+
+============================================================
+5. PACKAGING STRUCTURE
+============================================================
+
+Use this 3-layer stack:
+- Short Brief: fast reader entry point
+- One-Page Spec: public validator contract
+- Full Report: deeper internal backing, not included in this public release
+
+Recommended package name:
+Recovery Validator Core v1
