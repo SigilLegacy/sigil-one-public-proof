@@ -1,0 +1,156 @@
+# Sigil One
+
+Sigil One is a live tool that helps people see likely crypto tax exposure before they sell.
+
+It is decision-support and tax-prep infrastructure, not filing software.
+
+The paid output is a CPA-ready handoff bundle built from the saved snapshot and assumptions.
+
+Manual input is intentional. The goal is consequence clarity and clean assumptions, not blind automation.
+
+## Current workflow
+- estimate the exposure
+- save the snapshot
+- export the handoff bundle
+- verify the record later
+
+## What I’m learning
+One of the biggest product mistakes is trying to build the broad portfolio tool too early.
+
+The sharper wedge has been:
+
+help the user understand the likely tax consequence before the sale happens
+
+That’s where the uncertainty is highest and where the product is most useful.
+
+## What I’ll post here
+- build updates
+- scope decisions
+- early tester friction
+- lessons from shipping and positioning
+
+## Current focus
+- making the crypto flow clearer earlier
+- tightening first-use input clarity
+- improving how the non-crypto categories are framed so they don’t overpromise depth
+
+Happy to share updates as I keep building.
+
+## 2026-04-01
+
+Sigil One update: trust surface shipped, scope got sharper
+
+Shipped on the live site:
+- privacy, terms, and refund pages
+- footer trust links
+- tighter pricing and paywall copy
+- tighter signup and auth verification flow
+- holdings export entitlement fix for prior paid users
+
+The bigger change was product clarity.
+
+The sharper wedge is not broad crypto tracking.
+
+It’s helping someone understand the likely tax consequence before they sell.
+
+Current flow is getting tighter around:
+- estimate the exposure
+- preserve the snapshot
+- export a CPA-ready handoff bundle
+
+Still tightening a few live production edges, but the scope feels a lot more honest now.
+
+## 2026-04-08
+
+Sigil One update:
+
+Tightened a meaningful set of production edges.
+
+Shipped:
+- cleaned up the live Stripe webhook path and verified delivery plus write behavior in production
+- surfaced Export Readiness inside the product so users can see export state before purchase
+- fixed a mismatch where state tax rate was labeled optional but still blocked snapshot creation
+- moved authenticated return flow to the dashboard so the app opens on the main value surface instead of snapshots
+- re-tested the key auth and export paths in production, including the Google sign-in path
+
+The bigger gain was product truth.
+
+A lot of this work was about removing places where the product could imply readiness too early, route users somewhere less useful after auth, or let friction show up later than it should.
+
+Current flow is still:
+- estimate the exposure
+- save the snapshot
+- export the handoff bundle
+- verify the record later
+
+What got better:
+- clearer readiness before purchase
+- cleaner post-auth routing
+- less first-use confusion
+- fewer false blockers in the snapshot path
+
+Still focused on tightening the core crypto flow and reducing uncertainty at the exact points where users hesitate first.
+
+## 2026-04-19
+
+Sigil One update:
+
+This stretch was mostly about tightening the live product instead of adding more surface area.
+
+A few meaningful things shipped:
+- self-serve password recovery is now live and tested end to end
+- Vercel Web Analytics is installed and tracking real page activity
+- holdings export now blocks empty filter states before payment
+- crypto holdings can now be deleted like the other asset categories
+- snapshot routing and back-navigation are cleaner
+- dashboard copy now explains that exposure is based on user-entered sale prices, not live market prices
+- the landing page was rebuilt around the actual paid artifact: the handoff bundle
+- a Supabase security advisor warning around an internal database function was inspected, fixed, and verified
+
+The bigger improvement is product honesty.
+
+Sigil One is getting better at showing:
+- when a scenario is export-ready
+- what the estimate is based on
+- what still needs to be configured
+- what the buyer actually gets after export
+- which surfaces are for review versus verification
+
+The core flow is still:
+
+estimate exposure → save the snapshot → export the handoff bundle → verify the record later
+
+But the app is cleaner around the points where users would hesitate first.
+
+Current status:
+- core flow is coherent enough for outside feedback
+- password recovery is live
+- analytics are live
+- landing page better matches the real product
+- one meaningful Supabase trust warning was cleared
+- next phase is app polish and feedback prep, not blind feature work
+
+Next focus is tightening the first impression inside the app and getting better outside reactions before widening scope again.
+
+## 2026-04-27
+
+Sigil One update:
+
+Recent work stayed focused on tightening the live product instead of widening the scope too early.
+
+What still looks true:
+- the best use case is helping someone understand likely crypto tax exposure before they sell
+- the product is strongest when it stays close to that decision moment
+- trust, clarity, and readiness matter more than adding surface area too early
+
+What I’m still watching closely:
+- first-use clarity inside the app
+- how quickly a new user understands what to enter and why
+- whether the paid artifact is obvious enough before purchase
+- where hesitation shows up first in the flow
+
+The app feels much closer to honest now than it did when the scope was trying to do too much too early.
+
+Live product: sigil-one.com
+
+Public proof and live product now reflect the current web app, not the older Excel prototype.
