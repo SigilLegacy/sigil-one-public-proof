@@ -154,3 +154,64 @@ The app feels much closer to honest now than it did when the scope was trying to
 Live product: sigil-one.com
 
 Public proof and live product now reflect the current web app, not the older Excel prototype.
+
+## 2026-05-28
+
+Sigil One build update:
+
+After the last product-trust cleanup, this pass focused on making the first-use and handoff experience clearer before broader feedback.
+
+The main lesson:
+
+A crypto tax tool cannot just show numbers.
+
+It has to help the user understand what the number means, what assumptions were used, what is still missing, and what can safely be handed to a CPA.
+
+Recent work shipped:
+
+- wired FSP into Export Readiness as an internal control layer
+- added TOTP MFA for stronger account security
+- moved DNS authority to Cloudflare while keeping the app Vercel-handled
+- verified custom-domain health, landing, and login surfaces after DNS remediation
+- rebuilt the paid-output section on the landing page so users can see the Tax Handoff PDF, Tax Handoff CSV, Proof Archive, estimate form, and explanation preview before buying
+- replaced a weak CSV screenshot with a readable field preview so the export structure is easier to understand
+- added proper X/Open Graph metadata so shared links render with a real branded card
+- verified the card path through live metadata, Twitterbot visibility, image delivery, and external validation
+- added signup password strength feedback: Guessable, Guarded, Hardened
+- added confirm-password matching so account creation blocks mismatched passwords
+- clarified Buy Price / unit versus Cost Basis / total after real user confusion
+- clarified count labels across Dashboard, Crypto, and Holdings so manual positions, entries, and lots are easier to distinguish
+
+The user-confusion fix mattered most.
+
+A tester saw a $94 buy price and a $112.80 cost basis and thought the math was wrong. The actual issue was labeling: $94 was the per-unit buy price, and $112.80 was the total cost basis for 1.2 units.
+
+So I changed the language to make the difference explicit.
+
+That is the kind of edge I’m trying to tighten now.
+
+Current product flow:
+
+estimate exposure → save the snapshot → export the tax handoff → verify the record later
+
+Current status:
+
+- US-first
+- feedback-ready
+- no wallet connection in v1
+- not tax software
+- not filing software
+- not official tax advice
+- focused on helping users understand a possible crypto sale before they make it
+
+What I’m working through now:
+
+The core wedge is crypto tax uncertainty before selling.
+
+The expansion path may be broader transaction records for small businesses, eBay shops, and owner-operators, but I’m keeping the first product narrow until the crypto flow is clearer.
+
+Specific feedback I’m looking for:
+
+If you have dealt with crypto CSVs, tax records, CPA handoffs, or confusion before selling, I’m trying to understand one thing:
+
+Does the current handoff concept make the next step feel clearer, or would you still be unsure what to do with it?
