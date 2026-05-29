@@ -138,5 +138,4 @@ Use this 3-layer stack:
 - One-Page Spec: public validator contract
 - Full Report: deeper internal backing, not included in this public release
 
-Recommended package name:
 Recovery Validator Core v1
