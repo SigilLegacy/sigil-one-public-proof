@@ -1,4 +1,4 @@
-# Dylan Fratangeli | Sigil One Public Proof
+# Dylan Fratangeli | Sigil Systems Public Proof
 
 Public proof surface for work by Dylan Fratangeli under Sigil Systems.
 
