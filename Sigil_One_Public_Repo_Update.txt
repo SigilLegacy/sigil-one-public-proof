@@ -1,99 +1,249 @@
 # Sigil One
 
-Sigil One is a live tool that helps people see likely crypto tax exposure before they sell.
+Sigil One is a live, crypto-first, multi-asset tax-exposure planning, evidence-preservation, and CPA-handoff system.
 
-It is decision support and tax prep infrastructure, not filing software.
+The primary wedge is still helping someone understand likely crypto tax exposure before a sale. Crypto has the deepest source-evidence and transaction-lifecycle workflow, but the live product also supports manual holdings and shared planning workflows for Real Estate, Precious Metals, and Investments.
 
-The paid output is a CPA ready handoff bundle built from the saved snapshot and assumptions.
+Sigil One is decision-support and tax-prep infrastructure. It is not tax filing software, does not provide official tax advice, and does not connect to wallets or exchanges in v1.
 
-Manual and CSV assisted input are intentional. The goal is consequence clarity, source review, and clean assumptions, not blind automation.
+## Current record model
+
+Sigil One separates records by what they are allowed to mean:
+
+- open lots and planning records
+- staged CSV source evidence
+- durable transaction evidence
+- saved snapshots and assumptions
+- recorded manual disposals
+- export and verification artifacts
+
+A projected sale price is not actual proceeds.
+A CSV row is not automatically a current holding.
+A disposal record does not silently rewrite the original holding.
+Unknown basis remains unknown instead of being forced to zero.
+
+## Current intake paths
+
+Users can:
+
+- enter holdings manually across Crypto, Real Estate, Precious Metals, and Investments
+- upload supported crypto CSV files
+- stage and review imported rows before confirmation
+- inspect warnings and possible duplicates
+- select which eligible rows to confirm
+- preserve blocked or incomplete rows for later review
+- keep source provenance attached to confirmed records
+
+CSV import is controlled source-evidence intake, not blind synchronization.
 
 ## Current workflow
 
-* estimate the exposure
-* save the snapshot
-* export the handoff bundle
-* verify the record later
+Manual and imported records:
+- enter or upload records
+- stage and review source evidence
+- separate open lots from transaction evidence
+- confirm eligible records intentionally
 
-## What I’m learning
+Planning and decision support:
+- set a projected sale price
+- estimate likely exposure under the selected assumptions
+- save the scenario as a snapshot
+- review Export Readiness before purchase
 
-One of the biggest product mistakes is trying to build the broad portfolio tool too early.
+Disposal and handoff:
+- preserve source-backed disposal evidence
+- record a manual disposal when needed
+- export the report that matches the question
+- verify preserved records later
 
-The sharper wedge has been:
+## Current paid artifact classes
 
-help the user understand the likely tax consequence before the sale happens
+Sigil One currently has three separate paid artifact paths:
 
-That is where the uncertainty is highest and where the product is most useful.
+1. Snapshot Tax Handoff
+   - Tax Handoff PDF
+   - Tax Handoff CSV
+   - Proof Archive and verification material
 
-## What I’ll post here
+2. Holdings PDF
+   - answers: What do I still own?
+   - includes eligible current open lots and planning records
+   - excludes transaction evidence and realized-disposal history
 
-* build updates
-* scope decisions
-* early tester friction
-* lessons from shipping and positioning
+3. CPA Disposal Report
+   - answers: What did I sell?
+   - includes eligible snapshot sales, confirmed CSV disposal evidence, and recorded manual disposals
+   - keeps unknown or incomplete basis visible rather than fabricating certainty
+
+Each artifact has its own scope and purchase path.
+
+## Asset-category boundary
+
+The live application supports:
+
+- Crypto
+- Real Estate
+- Precious Metals
+- Investments
+
+Crypto remains the deepest and primary implementation for CSV intake, transaction evidence, and lifecycle classification.
+
+Real Estate, Precious Metals, and Investments support manual holdings and the shared generic capital-gains planning model. They do not yet apply category-specific tax doctrines such as depreciation recapture, collectibles treatment, wash-sale rules, qualified-dividend treatment, or similar specialized rules.
+
+## Current limitations
+
+Sigil One does not currently claim to provide:
+
+- tax filing
+- official tax advice
+- wallet or exchange synchronization
+- complete category-specific tax treatment
+- automatic partial-lot splitting
+- automatic mutation of a holding after a disposal record
+- complete exchange-pairing doctrine
+- complete derivative-specific doctrine
+- complete income and reward treatment
+- final reconciliation where source evidence or basis is missing
 
 ## Current focus
 
-* preparing the demo flow
-* showing the before sale crypto tax exposure wedge clearly
-* making the handoff artifact understandable on first view
-* showing how source review, saved snapshots, exports, and verification connect
-* keeping non crypto categories framed carefully so they do not overpromise depth
+The immediate product focus remains:
 
-## 2026-06-18
+- making the crypto decision-support flow clearer
+- improving source-evidence review
+- keeping projected and realized values separate
+- making paid artifact scope obvious before purchase
+- reducing user hesitation around assumptions, readiness, and CPA handoff
+- correcting category and copy drift where the live product and public description disagree
 
-Sigil One build update:
+The broader architecture is multi-asset, but the market wedge remains narrow:
 
-Recent work moved the app into demo ready shape.
+help users understand likely crypto tax exposure before selling, preserve the evidence and assumptions behind the decision, and create a cleaner record for CPA review.
 
-The focus was not adding a broad portfolio tracker. It was making the evidence and handoff workflow clear enough to show.
+## 2026-04-01
 
-Shipped work included:
+Sigil One update: trust surface shipped, scope got sharper
 
-* CSV intake moved from parsing to staged source evidence, review flags, bulk confirmation, and source labels
-* saved snapshots were reframed as decision records
-* export time verification results were persisted
-* snapshot timestamps were standardized to UTC
-* report type export entitlement windows were added
-* CPA disposal report eligibility checks and export paths were added
-* durable manual disposal records were added
-* projected and realized exposure logic was separated
-* tutorial, settings, About, legal, and onboarding surfaces were added or improved
-* dashboard and holdings loading behavior was improved
-* landing page copy and proof visuals were rebuilt around the paid handoff artifact
+Shipped on the live site:
+- privacy, terms, and refund pages
+- footer trust links
+- tighter pricing and paywall copy
+- tighter signup and auth verification flow
+- holdings export entitlement fix for prior paid users
 
-The larger product direction is clearer now.
+The bigger change was product clarity.
 
-Sigil One helps a user model likely crypto tax exposure before selling, save the scenario, export a CPA ready handoff, and verify the record later.
+The sharper wedge is not broad crypto tracking.
 
-The product remains manual and CSV assisted by design.
+It’s helping someone understand the likely tax consequence before they sell.
 
-The goal is source review and consequence clarity, not blind automation.
+Current flow is getting tighter around:
+- estimate the exposure
+- preserve the snapshot
+- export a CPA-ready handoff bundle
 
-Current public framing:
+Still tightening a few live production edges, but the scope feels a lot more honest now.
 
-* crypto tax exposure before a sale
-* user reviewed source data
-* saved decision records
-* CPA ready handoff exports
-* verification after the fact
-* no wallet connection in v1
-* no exchange connection in v1
-* not tax filing software
-* not official tax advice
+## 2026-04-08
+
+Sigil One update:
+
+Tightened a meaningful set of production edges.
+
+Shipped:
+- cleaned up the live Stripe webhook path and verified delivery plus write behavior in production
+- surfaced Export Readiness inside the product so users can see export state before purchase
+- fixed a mismatch where state tax rate was labeled optional but still blocked snapshot creation
+- moved authenticated return flow to the dashboard so the app opens on the main value surface instead of snapshots
+- re-tested the key auth and export paths in production, including the Google sign-in path
+
+The bigger gain was product truth.
+
+A lot of this work was about removing places where the product could imply readiness too early, route users somewhere less useful after auth, or let friction show up later than it should.
+
+Current flow is still:
+- estimate the exposure
+- save the snapshot
+- export the handoff bundle
+- verify the record later
+
+What got better:
+- clearer readiness before purchase
+- cleaner post-auth routing
+- less first-use confusion
+- fewer false blockers in the snapshot path
+
+Still focused on tightening the core crypto flow and reducing uncertainty at the exact points where users hesitate first.
+
+## 2026-04-19
+
+Sigil One update:
+
+This stretch was mostly about tightening the live product instead of adding more surface area.
+
+A few meaningful things shipped:
+- self-serve password recovery is now live and tested end to end
+- Vercel Web Analytics is installed and tracking real page activity
+- holdings export now blocks empty filter states before payment
+- crypto holdings can now be deleted like the other asset categories
+- snapshot routing and back-navigation are cleaner
+- dashboard copy now explains that exposure is based on user-entered sale prices, not live market prices
+- the landing page was rebuilt around the actual paid artifact: the handoff bundle
+- a Supabase security advisor warning around an internal database function was inspected, fixed, and verified
+
+The bigger improvement is product honesty.
+
+Sigil One is getting better at showing:
+- when a scenario is export-ready
+- what the estimate is based on
+- what still needs to be configured
+- what the buyer actually gets after export
+- which surfaces are for review versus verification
+
+The core flow is still:
+
+estimate exposure → save the snapshot → export the handoff bundle → verify the record later
+
+But the app is cleaner around the points where users would hesitate first.
 
 Current status:
+- core flow is coherent enough for outside feedback
+- password recovery is live
+- analytics are live
+- landing page better matches the real product
+- one meaningful Supabase trust warning was cleared
+- next phase is app polish and feedback prep, not blind feature work
 
-* live app
-* public proof updated
-* core crypto flow coherent enough to demo
-* next step is demo recording and outside feedback
+Next focus is tightening the first impression inside the app and getting better outside reactions before widening scope again.
+
+## 2026-04-27
+
+Sigil One update:
+
+Recent work stayed focused on tightening the live product instead of widening the scope too early.
+
+What still looks true:
+- the best use case is helping someone understand likely crypto tax exposure before they sell
+- the product is strongest when it stays close to that decision moment
+- trust, clarity, and readiness matter more than adding surface area too early
+
+What I’m still watching closely:
+- first-use clarity inside the app
+- how quickly a new user understands what to enter and why
+- whether the paid artifact is obvious enough before purchase
+- where hesitation shows up first in the flow
+
+The app feels much closer to honest now than it did when the scope was trying to do too much too early.
+
+Live product: sigil-one.com
+
+Public proof and live product now reflect the current web app, not the older Excel prototype.
 
 ## 2026-05-28
 
 Sigil One build update:
 
-After the last product trust cleanup, this pass focused on making the first use and handoff experience clearer before broader feedback.
+After the last product-trust cleanup, this pass focused on making the first-use and handoff experience clearer before broader feedback.
 
 The main lesson:
 
@@ -103,46 +253,46 @@ It has to help the user understand what the number means, what assumptions were 
 
 Recent work shipped:
 
-* added export readiness visibility so incomplete scenarios are separated from reviewable export states
-* added TOTP MFA for stronger account security
-* moved DNS authority to Cloudflare while keeping the app Vercel handled
-* verified custom domain health, landing, and login surfaces after DNS remediation
-* rebuilt the paid output section on the landing page so users can see the Tax Handoff PDF, Tax Handoff CSV, Proof Archive, estimate form, and explanation preview before buying
-* replaced a weak CSV screenshot with a readable field preview so the export structure is easier to understand
-* added proper X and Open Graph metadata so shared links render with a real branded card
-* verified the card path through live metadata, Twitterbot visibility, image delivery, and external validation
-* added signup password strength feedback: Guessable, Guarded, Hardened
-* added confirm password matching so account creation blocks mismatched passwords
-* clarified Buy Price per unit versus Cost Basis total after real user confusion
-* clarified count labels across Dashboard, Crypto, and Holdings so manual positions, entries, and lots are easier to distinguish
+- wired FSP into Export Readiness as an internal control layer
+- added TOTP MFA for stronger account security
+- moved DNS authority to Cloudflare while keeping the app Vercel-handled
+- verified custom-domain health, landing, and login surfaces after DNS remediation
+- rebuilt the paid-output section on the landing page so users can see the Tax Handoff PDF, Tax Handoff CSV, Proof Archive, estimate form, and explanation preview before buying
+- replaced a weak CSV screenshot with a readable field preview so the export structure is easier to understand
+- added proper X/Open Graph metadata so shared links render with a real branded card
+- verified the card path through live metadata, Twitterbot visibility, image delivery, and external validation
+- added signup password strength feedback: Guessable, Guarded, Hardened
+- added confirm-password matching so account creation blocks mismatched passwords
+- clarified Buy Price / unit versus Cost Basis / total after real user confusion
+- clarified count labels across Dashboard, Crypto, and Holdings so manual positions, entries, and lots are easier to distinguish
 
-The user confusion fix mattered most.
+The user-confusion fix mattered most.
 
-A tester saw a $94 buy price and a $112.80 cost basis and thought the math was wrong. The actual issue was labeling. $94 was the per unit buy price, and $112.80 was the total cost basis for 1.2 units.
+A tester saw a $94 buy price and a $112.80 cost basis and thought the math was wrong. The actual issue was labeling: $94 was the per-unit buy price, and $112.80 was the total cost basis for 1.2 units.
 
 So I changed the language to make the difference explicit.
 
-That is the kind of edge the product needed to make the handoff clearer.
+That is the kind of edge I’m trying to tighten now.
 
 Current product flow:
 
-estimate exposure, save the snapshot, export the tax handoff, verify the record later
+estimate exposure → save the snapshot → export the tax handoff → verify the record later
 
 Current status:
 
-* US first
-* feedback ready
-* no wallet connection in v1
-* not tax software
-* not filing software
-* not official tax advice
-* focused on helping users understand a possible crypto sale before they make it
+- US-first
+- feedback-ready
+- no wallet connection in v1
+- not tax software
+- not filing software
+- not official tax advice
+- focused on helping users understand a possible crypto sale before they make it
 
 What I’m working through now:
 
 The core wedge is crypto tax uncertainty before selling.
 
-The expansion path may be broader transaction records for small businesses, eBay shops, and owner operators, but I’m keeping the first product narrow until the crypto flow is clearer.
+The expansion path may be broader transaction records for small businesses, eBay shops, and owner-operators, but I’m keeping the first product narrow until the crypto flow is clearer.
 
 Specific feedback I’m looking for:
 
@@ -150,129 +300,60 @@ If you have dealt with crypto CSVs, tax records, CPA handoffs, or confusion befo
 
 Does the current handoff concept make the next step feel clearer, or would you still be unsure what to do with it?
 
-## 2026-04-27
+## 2026-08-02
 
 Sigil One update:
 
-Recent work stayed focused on keeping the live product close to the decision moment instead of widening the scope too early.
+This update corrects the public product description to match the current live system.
 
-What still looks true:
+The product is still crypto-first, but it is not crypto-only.
 
-* the best use case is helping someone understand likely crypto tax exposure before they sell
-* the product is strongest when it stays close to that decision moment
-* trust, clarity, and readiness matter more than adding surface area too early
+The live application now supports manual holdings across:
 
-What I was watching closely:
+- Crypto
+- Real Estate
+- Precious Metals
+- Investments
 
-* first use clarity inside the app
-* how quickly a new user understands what to enter and why
-* whether the paid artifact is obvious enough before purchase
-* where hesitation shows up first in the flow
+Crypto remains the deepest workflow because it also includes controlled CSV intake, staged review, lifecycle classification, durable transaction evidence, source-derived disposal records, and CPA disposal reporting.
 
-The app felt much closer to honest than it did when the scope was trying to do too much too early.
+The current record architecture separates:
 
-Live product: sigil-one.com
+- open lots and planning records
+- staged CSV source evidence
+- transaction evidence
+- snapshots and assumptions
+- manual disposal records
+- export and verification artifacts
 
-Public proof and live product now reflect the current web app, not the older Excel prototype.
+The reporting structure is also broader than the original public description.
 
-## 2026-04-19
+Current paid artifact paths:
 
-Sigil One update:
+- Snapshot Tax Handoff: Tax Handoff PDF, Tax Handoff CSV, and Proof Archive
+- Holdings PDF: current eligible holdings and planning records
+- CPA Disposal Report: eligible completed disposals for CPA review
 
-This stretch was mostly about improving the live product instead of adding more surface area.
+The distinction is intentional:
 
-A few meaningful things shipped:
+- Holdings PDF answers: What do I still own?
+- CPA Disposal Report answers: What did I sell?
+- Snapshot Tax Handoff preserves one modeled decision and its assumptions
 
-* self serve password recovery is now live and tested end to end
-* Vercel Web Analytics is installed and tracking real page activity
-* holdings export now blocks empty filter states before payment
-* crypto holdings can now be deleted like the other asset categories
-* snapshot routing and back navigation are cleaner
-* dashboard copy now explains that exposure is based on user entered sale prices, not live market prices
-* the landing page was rebuilt around the actual paid artifact, the handoff bundle
-* an internal database trust issue was reviewed, tightened, and verified after the fix
+A manual disposal record does not silently reduce, split, or close the original holding. Partial-lot splitting and automatic holding reconciliation remain unsupported until those behaviors can be implemented without inventing lifecycle state.
 
-The bigger improvement was product honesty.
+The current product boundary is:
 
-Sigil One got better at showing:
+- decision-support and tax-prep infrastructure
+- not tax filing software
+- not official tax advice
+- no wallet or exchange connection in v1
+- no claim of complete category-specific tax doctrine
+- unknown basis and incomplete evidence remain visible instead of being forced into a false answer
 
-* when a scenario is export ready
-* what the estimate is based on
-* what still needs to be configured
-* what the buyer actually gets after export
-* which surfaces are for review versus verification
+The core market wedge remains the same:
 
-The core flow stayed the same:
+help users understand likely crypto tax exposure before selling, preserve the evidence and assumptions behind the decision, and create a cleaner handoff for CPA review.
 
-estimate exposure, save the snapshot, export the handoff bundle, verify the record later
+The difference now is that the public description matches the system that was actually built.
 
-But the app became cleaner around the points where users would hesitate first.
-
-Current status at that point:
-
-* core flow coherent enough for outside feedback
-* password recovery live
-* analytics live
-* landing page better matched the real product
-* one meaningful database trust issue cleared
-* next phase moved toward app polish and feedback prep, not blind feature work
-
-## 2026-04-08
-
-Sigil One update:
-
-Tightened a meaningful set of production edges.
-
-Shipped:
-
-* cleaned up the live Stripe webhook path and verified delivery plus write behavior in production
-* surfaced Export Readiness inside the product so users can see export state before purchase
-* fixed a mismatch where state tax rate was labeled optional but still blocked snapshot creation
-* moved authenticated return flow to the dashboard so the app opens on the main value surface instead of snapshots
-* re tested the key auth and export paths in production, including the Google sign in path
-
-The bigger gain was product truth.
-
-A lot of this work was about removing places where the product could imply readiness too early, route users somewhere less useful after auth, or let friction show up later than it should.
-
-Current flow was still:
-
-* estimate the exposure
-* save the snapshot
-* export the handoff bundle
-* verify the record later
-
-What got better:
-
-* clearer readiness before purchase
-* cleaner post auth routing
-* less first use confusion
-* fewer false blockers in the snapshot path
-
-The core crypto flow became cleaner at the exact points where users hesitate first.
-
-## 2026-04-01
-
-Sigil One update: trust surface shipped, scope got sharper
-
-Shipped on the live site:
-
-* privacy, terms, and refund pages
-* footer trust links
-* tighter pricing and paywall copy
-* tighter signup and auth verification flow
-* holdings export entitlement fix for prior paid users
-
-The bigger change was product clarity.
-
-The sharper wedge was not broad crypto tracking.
-
-It was helping someone understand the likely tax consequence before they sell.
-
-Current flow became tighter around:
-
-* estimate the exposure
-* preserve the snapshot
-* export a CPA ready handoff bundle
-
-The scope felt more honest once the product stayed closer to the user’s actual decision moment.
