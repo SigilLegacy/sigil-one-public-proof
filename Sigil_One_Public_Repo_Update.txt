@@ -356,4 +356,3 @@ The core market wedge remains the same:
 help users understand likely crypto tax exposure before selling, preserve the evidence and assumptions behind the decision, and create a cleaner handoff for CPA review.
 
 The difference now is that the public description matches the system that was actually built.
-
