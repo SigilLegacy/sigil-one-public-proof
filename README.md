@@ -2,254 +2,119 @@
 
 Public proof repository for selected work by Dylan Fratangeli under Sigil Systems.
 
-This repository preserves bounded product evidence, validation and recovery records, conceptual observations, and external review materials without publishing private source code or internal control systems.
+Sigil Systems is a veteran-founded, founder-controlled effort focused on evidence-bound AI product risk and execution control. The central problem is straightforward: an AI system can produce plausible output and report completion even when a required source, permission, version, or evidence condition was never satisfied or has changed.
 
-Each record is presented with its own scope, provenance, classification, and proof limits.
+This repository presents bounded public evidence without publishing private source code, internal control grammar, authority ordering, decision thresholds, production configuration, credentials, or customer data.
 
-The current lead proof object is the live Sigil One web app.
+## Start here
 
-## Proof areas
+- [Proof index](PROOF_INDEX.md)
+- [Execution Proof beta overview](evidence/execution-proof/BETA_OVERVIEW.md)
+- [Anubis validation summary](evidence/anubis/VALIDATION_SUMMARY.md)
+- [Sigil One public build record](Sigil_One_Public_Repo_Update.txt)
+- [FSP public vocabulary](FSP_PUBLIC_VOCABULARY.md)
+- [Public proof note](PUBLIC_PROOF_NOTE.md)
 
-- [Sigil One product proof](#current-proof-object)
-- [Conceptual observations](#conceptual-observations)
-- [Validation and recovery records](#earlier-public-validation-artifacts)
-- External review evidence
+## Current system map
 
-## Current proof object
+Status is stated as of September 3, 2026.
 
-**Sigil One** is a live web application at https://sigil-one.com.
+### Risk Review
 
-It helps someone estimate likely crypto tax exposure before selling, preserve the scenario as a decision record, and export a CPA-ready handoff bundle.
+The Risk Review is the initial commercial wedge. The offer package is complete, and the current public commercial baseline is zero paid engagements.
 
-The product is focused on one clear moment:
+The proposed customer receives a bounded written assessment of one working AI product. The readout separates supported findings, unresolved conditions, ranked failure paths, and next tests. It is not certification, a completeness guarantee, or a transfer of the private method.
 
-understanding the likely tax consequence before a crypto sale happens.
+No present public proof artifact for the Risk Review is included in this repository.
 
-## What Sigil One does
+### Execution Proof
 
-Sigil One is a before-you-sell crypto tax exposure tool.
+Execution Proof is a provider-independent local beta that keeps task state and completion authority outside model prose. It binds work to named objects, records evidence, runs deterministic checks, and distinguishes preparation, authorization, execution evidence, verification, staleness, and integrity failure.
 
-It is decision-support and recordkeeping support, not tax filing software. The user provides the figures. The app helps organize the assumptions, estimate the likely exposure, preserve the scenario, and export a clean handoff that an accountant can review.
+The current public summary is limited to internal, bounded evidence. Historical and current-build validation must not be conflated. No trusted remote producer, customer deployment, blind replication, or external validation is established.
 
-The goal is consequence clarity before action, not blind automation.
+[Read the bounded beta overview](evidence/execution-proof/BETA_OVERVIEW.md).
 
-## Current workflow
+### Anubis
 
-1. Estimate the exposure
-2. Save the snapshot
-3. Export the handoff bundle
-4. Verify the record later
+Anubis is a one-host Windows desktop beta for runtime binding and controlled operation. A dated internal post-reboot record reports 44 checks passed and 10 of 10 protected hashes verified for the recorded package.
 
-## Source-review intake
+That record does not establish a production receipt, second-host portability, a second operator, independent replication, or platform-native enforcement in ChatGPT or Claude.
 
-Manual input and CSV-assisted intake are intentional.
+[Read the bounded validation summary](evidence/anubis/VALIDATION_SUMMARY.md).
 
-Sigil One does not connect to wallets or exchanges in this version. The user reviews and confirms the source data before it becomes part of the working record.
+### Sigil One
 
-This keeps the workflow close to the actual decision:
+[Sigil One](https://sigil-one.com/) is a live multi-asset holdings record, decision-modeling, evidence-preservation, and professional-handoff application.
 
-- What am I about to sell?
-- What assumptions am I using?
-- What is the likely tax exposure?
-- What can I hand to a CPA afterward?
+It supports manual holdings across crypto, investments, real estate, and precious metals. Crypto currently has the deepest source-evidence workflow, including a browser-based file diagnostic, staged imports, transaction classification, directional exposure modeling, and disposal support.
 
-## Paid artifact
+The application has three separate $49 artifact paths:
 
-The paid export is a CPA-ready handoff bundle built from the saved snapshot and its assumptions.
+1. Snapshot Tax Handoff
+2. Holdings PDF
+3. CPA Disposal Report
 
-Current handoff artifacts include:
+These are support materials prepared for professional or CPA review. They are not tax filing, official tax advice, CPA approval, or a final tax determination. No confirmed external purchasing cohort is claimed.
 
-- Tax Handoff PDF
-- Tax Handoff CSV
-- Proof Archive
+The embedded explanation layer is read-only and inactive until confirmed history can ground it. Deterministic account records and calculations do not depend on AI.
 
-The handoff is designed to make the scenario reviewable, structured, and easier to verify later.
+[Read the current public build record](Sigil_One_Public_Repo_Update.txt) or [open the free crypto file diagnostic](https://sigil-one.com/diagnostic).
 
-## Current product proof themes
+### BootMaker
 
-Recent app work has focused on:
+BootMaker is a proposed productization layer. It is concept and internal architecture only. It is not built, has no public proof artifact here, and has no claimed revenue or buyer validation.
 
-- CSV intake as staged source evidence
-- review flags, filters, and confirmation before source rows affect records
-- saved snapshots as decision records
-- export-time verification persistence
-- UTC snapshot timestamp standardization
-- report-type export entitlement windows
-- CPA disposal report path and eligibility checks
-- durable manual disposal records
-- projected and realized exposure separation
-- tutorial, settings, About, legal, and onboarding surfaces
-- dashboard and holdings loading improvements
-- landing page copy and proof visuals rebuilt around the paid handoff artifact
+## Current evidence boundary
 
-## Public-safe technology overview
+The repository supports a system map and selected bounded records. It does not establish:
 
-Sigil One is a private source code application with a public product surface.
+- product-market fit
+- paid Risk Review demand
+- repeatable acquisition
+- measured customer ROI
+- production portability
+- second-host or second-operator replication
+- independent benchmark replication
+- BootMaker as a built product
+- patentability, certification, compliance, or security assurance
+- a financing commitment, mandate, valuation, or investment return
 
-The current app has been built with:
+Internal technical results are not customer validation. Completed work is not paid demand. A public summary is not a production receipt.
 
-- Next.js
-- TypeScript
-- React
-- Vercel
-- Prisma and PostgreSQL
-- Supabase
-- Stripe
-- CSV parsing
-- PDF and archive generation
-- automated smoke tests across core flows
+## Evidence sequence
 
-This repository does not publish the app source code.
+The current operating sequence is:
 
-## Boundaries
+1. Sell and measure the bounded Risk Review.
+2. Test Anubis portability only after commercial evidence exists.
+3. Productize through BootMaker only after portability evidence exists.
+4. Keep Sigil One as a separate live consumer-product lane.
 
-Sigil One is:
+Failure or contradictory evidence at a gate should pause or redirect the next phase rather than be relabeled as traction.
 
-- decision-support for a possible crypto sale
-- recordkeeping support
-- a CPA handoff preparation tool
-- a source-review workflow
-- a live product under active development
+## Earlier public proof
 
-Sigil One is not:
+The repository also preserves earlier recovery-validation materials and an approved conceptual observation:
 
-- tax filing software
-- official tax advice
-- a wallet connection product
-- an exchange connection product
-- a trading bot
-- a market price feed
-- a claim to know what the user owes
+- [Recovery Validation Public Note](RECOVERY_VALIDATION_PUBLIC.md)
+- [Recovery Validator Core v1 Package](Recovery_Validator_Core_v1_Package.txt)
+- [Jozsef Fodor conceptual observation](conceptual_observations/jozsef-fodor-answer-layer-admissibility/README.md)
 
-Exposure estimates are based on the values and assumptions the user enters and confirms.
+The recovery-validation files are earlier public specification artifacts. Their field labels are public explanatory tokens, not a production schema. They are not production code, a production receipt, or evidence that the current Anubis or Execution Proof build passed present validation.
 
-## Conceptual observations
-
-This repository includes narrowly scoped conceptual observations from external practitioners where publication permission, context, attribution, and classification boundaries have been preserved.
-
-These records are not presented as testimonials, technical validation, evidence of effectiveness, endorsements, or recommendations unless the record explicitly states otherwise.
-
-### Jozsef Fodor — Answer-Layer Admissibility Boundary
-
-The approved record is stored at:
-
-`conceptual_observations/jozsef-fodor-answer-layer-admissibility/`
-
-It presents a bounded conceptual observation concerning Dylan Fratangeli’s answer-layer framing and the distinction between an upstream admissibility boundary and later agent or action governance.
-
-The observation remains attached to its disclaimer and record context. It is classified only as a conceptual observation based on public framing and direct exchange.
-
-## Included files
-
-### `README.md`
-
-The front door for this public proof repository.
-
-It should be read first because it explains the current lead product proof object, the wider proof areas, and how earlier public artifacts fit into the repository.
-
-### `Sigil_One_Public_Repo_Update.txt`
-
-A public build log for Sigil One.
-
-It tracks product scope, shipped updates, product clarity decisions, and lessons from building the live app.
-
-### `PUBLIC_PROOF_NOTE.md`
-
-A public note explaining why this proof repository exists.
-
-It describes the repository as a curated public proof surface, not a full release of private internals.
-
-### `RECOVERY_VALIDATION_PUBLIC.md`
-
-A public-safe architecture note about recovery validation.
-
-It shows one earlier validation artifact and explains how a claimed recovery action can be evaluated using evidence, authority, internal consistency, and state safety.
-
-### `Recovery_Validator_Core_v1_Package.txt`
-
-A compact public validator artifact.
-
-It includes the recovery validation short brief, one-page spec, outcome contract, high-level rule surface, minimal procedure, and evidence minimum.
-
-### `conceptual_observations/`
-
-Repository records for approved conceptual observations.
-
-Each record should preserve:
-
-- exact or materially approved wording
-- attribution
-- basis and authorized placement
-- disclaimer
-- classification boundary
-- publication scope
-- public-safe provenance notes
-
-Private permission screenshots and direct-message records should not be published unless separately authorized.
-
-## Earlier public validation artifacts
-
-This repository also preserves earlier public validation work related to GoldenState, FSP, and recovery validation.
-
-Those artifacts are kept here as labeled public proof, not as the current Sigil One app source code and not as a full release of the private control layer.
-
-They are useful for showing that the work behind Sigil Systems includes structured thinking around validation, recovery, evidence, bounded execution, and public proof packaging.
-
-They should be read as earlier public proof artifacts.
-
-The current Sigil One web app remains the lead product proof object.
-
-## What is intentionally not published here
-
-This repository does not publish:
-
-- the private Sigil One app source code
-- private startup and runtime boot surfaces
-- the full private control grammar
-- exact authority ordering
-- exact validator dispatch surfaces
-- exact transition logic
-- exact completion thresholds
-- exact drift and recovery control details
-- private permission messages unless separately authorized
-- secrets, environment variables, customer data, or production data
-
-The objective is public proof, not uncontrolled disclosure.
+The conceptual observation is not a testimonial, technical validation, endorsement, or evidence of effectiveness.
 
 ## Public links
 
-- Live product: https://sigil-one.com
-- Public proof repo: https://github.com/SigilLegacy/sigil-systems-public-proof
-- GoldenState: https://sigillegacy.gumroad.com/l/goldenstate
-- Legacy Sigil One Excel version: https://sigillegacy.gumroad.com/l/sigil-one
+- Live product: https://sigil-one.com/
+- Free crypto file diagnostic: https://sigil-one.com/diagnostic
+- Public proof repository: https://github.com/SigilLegacy/sigil-systems-public-proof
 - LinkedIn: https://www.linkedin.com/in/dylanfratangeli
 - X: https://x.com/SigilLegacy
-
-## How to read this repository
-
-Recommended reading order:
-
-1. `README.md`
-2. `Sigil_One_Public_Repo_Update.txt`
-3. `conceptual_observations/`
-4. `PUBLIC_PROOF_NOTE.md`
-5. `RECOVERY_VALIDATION_PUBLIC.md`
-6. `Recovery_Validator_Core_v1_Package.txt`
-
-## Search and identity context
-
-This proof repository is part of the public association layer for:
-
-- Dylan Fratangeli
-- Sigil Systems
-- Sigil One
-- GoldenState
-- FSP
-
-It is intended to strengthen the link between public identity and bounded public evidence while keeping private implementation details protected.
 
 ## About
 
 Built by Dylan Fratangeli under Sigil Systems.
 
-Sigil Systems is a veteran-owned software company focused on decision support, record preservation, evidence-aware validation, and practical financial clarity.
+Sigil Systems is currently founder-controlled and pre-formation. Public materials describe present evidence and explicit limits. They do not establish a legal entity, customer demand, financing, certification, or product-market fit.

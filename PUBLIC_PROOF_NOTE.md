@@ -2,85 +2,103 @@
 
 ## Purpose
 
-This folder is a curated public proof surface for work by Dylan Fratangeli under Sigil Systems.
+This repository is a curated public proof surface for work by Dylan Fratangeli under Sigil Systems.
 
-It exists to reduce the gap between public identity and public evidence without publishing the full private control layer behind GoldenState and FSP.
+It exists to make selected work inspectable without publishing the private control layer, source code, production configuration, credentials, customer data, or internal research archive.
 
-It is a proof surface, not a full release.
+It is a proof surface, not a complete release.
 
-## Core claim
+## Evidence classes
 
-The work behind Sigil One, GoldenState, and FSP is not just an idea set or a loose collection of notes. It includes structured artifacts related to validation, recovery logic, bounded execution, and runtime control.
+Each artifact should be read according to its stated evidence class and boundary.
 
-The current public gap is not missing substance.
+### Live product evidence
 
-The current public gap is proof surfacing and verification speed.
+Sigil One is a live application. Its public build record describes current product scope, user-facing workflows, and explicit limitations. A live product does not by itself establish external paid demand, retention, product-market fit, or customer outcomes.
 
-## Why this repo exists now
+### Internal technical evidence
 
-This release is designed to do three things:
+Execution Proof and Anubis have bounded internal records. Internal results may support a specific technical statement about a dated test or package. They do not establish customer validation, production portability, independent replication, or performance across arbitrary workloads.
 
-1. provide inspectable public proof
-2. strengthen search and entity association for Dylan Fratangeli and Sigil One
-3. surface real technical structure without disclosing the full internal control grammar
+### Completed work evidence
 
-## Why recovery is the first public slice
+A completed review or work sample can show that work occurred and what was delivered within its authorization boundary. It is not automatically a paid engagement, testimonial, endorsement, validation, or measured customer outcome.
 
-Recovery validation is the strongest first public slice because it shows several things at once:
+### Earlier public specifications
 
-- the work is structured
-- the work is operational
-- the work uses explicit fields, rules, and outcomes
-- the system does not rely on post hoc narrative alone
+The recovery-validation files are earlier public specification artifacts. Their field labels are public explanatory tokens, not a production schema or disclosure of the current private implementation.
 
-That makes it a good bridge between private depth and public legibility.
+Those files are not production code, a production receipt, or evidence that the current Anubis or Execution Proof build passed present validation.
 
-## What is public in this folder
+### Conceptual observations
 
-### `RECOVERY_VALIDATION_PUBLIC.md`
-Shows the public-safe recovery validation model, including the nine-field structure, pass/fail/blocked outcomes, and evidence-first boundaries.
+An approved conceptual observation preserves a specific idea and its publication context. It is not technical validation, evidence of effectiveness, a testimonial, or a broader endorsement unless the record explicitly says otherwise.
 
-### `Recovery_Validator_Core_v1_Package.txt`
-Shows a compact validator artifact with a short brief, public one-page spec, and a concise rule surface.
+## Current public map
 
-### `README.md`
-Provides the search-facing and repo-facing front door for the package.
+The current repository map is:
+
+- `README.md`: front-page system map and current evidence boundary
+- `PROOF_INDEX.md`: claim-level navigation and verification limits
+- `evidence/execution-proof/BETA_OVERVIEW.md`: bounded Execution Proof status
+- `evidence/anubis/VALIDATION_SUMMARY.md`: bounded Anubis status
+- `Sigil_One_Public_Repo_Update.txt`: current Sigil One build record
+- `FSP_PUBLIC_VOCABULARY.md`: public-safe terminology
+- `RECOVERY_VALIDATION_PUBLIC.md`: earlier recovery-validation specification
+- `Recovery_Validator_Core_v1_Package.txt`: earlier compact validator specification
+- `conceptual_observations/`: approved conceptual records
 
 ## What remains private
 
-The following are intentionally not part of this release:
+This repository does not publish or authorize publication of:
 
-- raw boot surfaces
-- raw canonical packs
-- exact authority order
-- exact runner syntax
-- exact transition and completion conditions
-- exact drift detection logic
-- internal dispatch and enforcement details
+- private prompts, boots, rule banks, or control packages
+- private source code
+- exact authority hierarchy or precedence
+- exact transition, completion, scoring, or decision thresholds
+- private grammar, registry definitions, or trust-adapter logic
+- internal schemas, identifiers, hashes, paths, ports, or credentials
+- collector commands, dispatch, retry, recovery, or enforcement mechanics
+- production configuration, environment variables, or customer data
+- private permission records unless separately authorized
 
-This is intentional.
+## Claim discipline
 
-The objective is public proof, not uncontrolled disclosure.
+The repository distinguishes:
+
+- observed state from planned state
+- internal technical evidence from external validation
+- completed work from paid demand
+- a live product from a verified purchasing cohort
+- a dated package result from current-tree or production readiness
+- public explanatory material from private implementation
+
+Missing or conflicting evidence must remain unresolved. It must not be converted into a stronger claim for presentation convenience.
 
 ## Reading order
 
 1. `README.md`
-2. `RECOVERY_VALIDATION_PUBLIC.md`
-3. `Recovery_Validator_Core_v1_Package.txt`
+2. `PROOF_INDEX.md`
+3. `evidence/execution-proof/BETA_OVERVIEW.md`
+4. `evidence/anubis/VALIDATION_SUMMARY.md`
+5. `Sigil_One_Public_Repo_Update.txt`
+6. `FSP_PUBLIC_VOCABULARY.md`
+7. Earlier recovery and conceptual records
 
 ## Boundary statement
 
-This folder is not:
+This repository is not:
 
 - the full archive
 - the full implementation
-- a full whitepaper
-- production code
-- a complete release of the internal control grammar
+- a production receipt
+- a certification or security assessment
+- proof of paid demand or product-market fit
+- a financing or valuation record
 
-This folder is:
+This repository is:
 
-- a curated proof surface
-- a packaging step
-- a verification aid
-- a foundation for later release strategy, search reinforcement, and commercialization
+- a curated public proof surface
+- a claim-navigation aid
+- a bounded set of public-safe evidence summaries
+- a bridge between private work and responsible public verification
