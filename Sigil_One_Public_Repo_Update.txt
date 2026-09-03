@@ -1,10 +1,12 @@
 # Sigil One
 
-Sigil One is a live, crypto-first, multi-asset tax-exposure planning, evidence-preservation, and CPA-handoff system.
+Sigil One is a live multi-asset holdings record, decision-modeling, evidence-preservation, and professional-handoff system.
 
-The primary wedge is still helping someone understand likely crypto tax exposure before a sale. Crypto has the deepest source-evidence and transaction-lifecycle workflow, but the live product also supports manual holdings and shared planning workflows for Real Estate, Precious Metals, and Investments.
+It brings crypto, stocks and funds, real estate, and precious metals into one account view without flattening their categories or evidence boundaries. It keeps what a user currently holds, what has happened, and what they may do next as distinct financial states.
 
-Sigil One is decision-support and tax-prep infrastructure. It is not tax filing software, does not provide official tax advice, and does not connect to wallets or exchanges in v1.
+Crypto is the deepest source-evidence workflow today. It adds a browser-based file diagnostic, staged imports, transaction classification, directional exposure modeling, and CPA-focused disposal support. Investments, real estate, and precious metals currently use manual position records and a shared generic capital-gains planning model.
+
+Sigil One is a decision-record and professional-review handoff tool. It is not tax filing software, does not provide official tax advice, and does not connect to wallets or exchanges in v1.
 
 ## Current record model
 
@@ -27,6 +29,7 @@ Unknown basis remains unknown instead of being forced to zero.
 Users can:
 
 - enter holdings manually across Crypto, Real Estate, Precious Metals, and Investments
+- run a browser-based diagnostic on a supported crypto history file without adding anything to an account
 - upload supported crypto CSV files
 - stage and review imported rows before confirmation
 - inspect warnings and possible duplicates
@@ -58,7 +61,7 @@ Disposal and handoff:
 
 ## Current paid artifact classes
 
-Sigil One currently has three separate paid artifact paths:
+Sigil One currently has three separate $49 paid artifact paths:
 
 1. Snapshot Tax Handoff
    - Tax Handoff PDF
@@ -107,18 +110,27 @@ Sigil One does not currently claim to provide:
 
 ## Current focus
 
-The immediate product focus remains:
+The account-level value is broader than any one acquisition wedge:
 
-- making the crypto decision-support flow clearer
-- improving source-evidence review
-- keeping projected and realized values separate
-- making paid artifact scope obvious before purchase
-- reducing user hesitation around assumptions, readiness, and CPA handoff
-- correcting category and copy drift where the live product and public description disagree
+- see current positions across four asset categories in one holdings record
+- preserve category, source, and state instead of flattening unlike records
+- keep current holdings, historical evidence, and possible actions distinct
+- model a decision before acting while keeping its assumptions visible
+- export the record that matches the question being asked
 
-The broader architecture is multi-asset, but the market wedge remains narrow:
+The current entry points remain specific:
 
-help users understand likely crypto tax exposure before selling, preserve the evidence and assumptions behind the decision, and create a cleaner record for CPA review.
+- a free diagnostic for supported crypto history files
+- deeper crypto source-evidence review and transaction handling
+- separate paid outputs for holdings, disposals, and a saved sale decision
+
+This allows focused product testing without redefining the entire system as crypto-only.
+
+## Embedded AI boundary
+
+An embedded explanation layer exists in the product, but it remains read-only and inactive until enough confirmed history exists to ground it.
+
+The account record and deterministic calculations do not depend on AI. The explanation layer is not used to fill missing history, modify account records, or determine final tax treatment.
 
 ## 2026-04-01
 
@@ -140,7 +152,7 @@ It’s helping someone understand the likely tax consequence before they sell.
 Current flow is getting tighter around:
 - estimate the exposure
 - preserve the snapshot
-- export a CPA-ready handoff bundle
+- export support material for CPA review
 
 Still tightening a few live production edges, but the scope feels a lot more honest now.
 
@@ -188,7 +200,7 @@ A few meaningful things shipped:
 - crypto holdings can now be deleted like the other asset categories
 - snapshot routing and back-navigation are cleaner
 - dashboard copy now explains that exposure is based on user-entered sale prices, not live market prices
-- the landing page was rebuilt around the actual paid artifact: the handoff bundle
+- the landing page was rebuilt around the actual paid artifact: support material for CPA review
 - a Supabase security advisor warning around an internal database function was inspected, fixed, and verified
 
 The bigger improvement is product honesty.
@@ -254,7 +266,7 @@ It has to help the user understand what the number means, what assumptions were 
 Recent work shipped:
 
 - wired FSP into Export Readiness as an internal control layer
-- added TOTP MFA for stronger account security
+- added a TOTP enrollment surface while login-time enforcement remained inactive
 - moved DNS authority to Cloudflare while keeping the app Vercel-handled
 - verified custom-domain health, landing, and login surfaces after DNS remediation
 - rebuilt the paid-output section on the landing page so users can see the Tax Handoff PDF, Tax Handoff CSV, Proof Archive, estimate form, and explanation preview before buying
@@ -356,3 +368,39 @@ The core market wedge remains the same:
 help users understand likely crypto tax exposure before selling, preserve the evidence and assumptions behind the decision, and create a cleaner handoff for CPA review.
 
 The difference now is that the public description matches the system that was actually built.
+
+## 2026-09-02
+
+Sigil One update:
+
+The public product surface was redesigned to show the full account-level value already present in the application.
+
+The current headline is:
+
+See the whole account. Ground the next move.
+
+The revised public structure now shows:
+
+- one controlled holdings record across crypto, investments, real estate, and precious metals
+- separate category, source, and planning boundaries, with the deeper file-evidence workflow currently limited to crypto
+- current holdings, historical evidence, and prospective decisions as three distinct states
+- a five-step workflow: record, separate, model, preserve, and hand off
+- a staged crypto-import product view rather than a placeholder diagram
+- separate $49 outputs for the Holdings PDF, CPA Disposal Report, and saved-scenario Tax Handoff
+- the free crypto file diagnostic as the deepest source-evidence entry point
+- the embedded AI explanation layer as read-only and inactive until confirmed history can ground it
+
+The visual design of the landing page and signed-in application was also aligned around the same controlled-record language and product boundaries.
+
+This did not expand the tax capability claim.
+
+The current boundary remains:
+
+- multi-asset recordkeeping with category and source preserved
+- deeper source-evidence tooling beginning with crypto
+- generic capital-gains planning for manually tracked investments, real estate, and metals
+- directional estimates rather than final tax determinations
+- support materials for professional review rather than tax filing or tax advice
+- no requirement to connect a wallet or exchange
+
+The commercial entry point can remain focused while the product description stays honest about the broader system already built.
